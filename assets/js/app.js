@@ -14,3 +14,12 @@ import css from  "../css/app.scss"
 //     import socket from "./socket"
 //
 import "phoenix_html"
+document.addEventListener('DOMContentLoaded', () => {
+    (document.querySelectorAll('.notification .delete') || []).forEach(($delete) => {
+      $notification = $delete.parentNode;
+  
+      $delete.addEventListener('click', () => {
+        $notification.parentNode.removeChild($notification);
+      });
+    });
+  });
